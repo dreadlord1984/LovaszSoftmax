@@ -11,8 +11,8 @@ Published in CVPR 2018. See [project page](http://bmax.im/LovaszSoftmax), [arxiv
 ## PyTorch implementation of the loss layer (*pytorch* folder)
 **Files included:**
 * **lovasz_losses.py**: Standalone PyTorch implementation of the Lovász hinge and Lovász-Softmax for the Jaccard index
-* **demo_binary.ipynb**: Jupyter notebook showcasing binary training of a linear model
-* **demo_multiclass.ipynb**: Jupyter notebook showcasing multiclass training of a linear model
+* **demo_binary.ipynb**: Jupyter notebook showcasing binary training of a linear model, with the Lovász Hinge and with the Lovász-Sigmoid.
+* **demo_multiclass.ipynb**: Jupyter notebook showcasing multiclass training of a linear model with the Lovász-Softmax
 
 The binary `lovasz_hinge` expects real-valued scores (positive scores correspond to foreground pixels). 
 
@@ -21,8 +21,8 @@ The multiclass `lovasz_softmax` expect class probabilities (the maximum scoring 
 ## TensorFlow implementation of the loss layer (*tensorflow* folder)
 **Files included:**
 * **lovasz_losses_tf.py**: Standalone TensorFlow implementation of the Lovász hinge and Lovász-Softmax for the Jaccard index
-* **demo_binary_tf.ipynb**: Jupyter notebook showcasing the application of the binary loss
-* **demo_multiclass_tf.ipynb**: Jupyter notebook showcasing the application of the multiclass loss
+* **demo_binary_tf.ipynb**: Jupyter notebook showcasing binary training of a linear model, with the Lovász Hinge and with the Lovász-Sigmoid.
+* **demo_multiclass_tf.ipynb**: Jupyter notebook showcasing the application of the multiclass loss with the Lovász-Softmax
 
 *Warning: the losses values and gradients have been tested to be the same as in PyTorch (see notebooks), however we have not used the TF implementation in a training setting.*
 
@@ -43,11 +43,11 @@ Compiling from Tensorflow master (or using a future distribution that includes c
 ## Citation
 Please cite
 ```
-@InProceedings{Berman_2018_CVPR,
-author = {Berman, Maxim and Rannen Triki, Amal and Blaschko, Matthew B.},
-title = {The Lovász-Softmax Loss: A Tractable Surrogate for the Optimization of the Intersection-Over-Union Measure in Neural Networks},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2018}
+@inproceedings{berman2018lovasz,
+  title={The Lov{\'a}sz-Softmax loss: A tractable surrogate for the optimization of the intersection-over-union measure in neural networks},
+  author={Berman, Maxim and Rannen Triki, Amal and Blaschko, Matthew B},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={4413--4421},
+  year={2018}
 }
 ```
